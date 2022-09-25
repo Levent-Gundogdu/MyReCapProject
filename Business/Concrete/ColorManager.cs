@@ -1,6 +1,7 @@
 ﻿using Business.Abstract;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,11 @@ namespace Business.Concrete
         public List<Color> GetAll()
         {
             return _colorDal.GetAll();
+        }
+
+        public List<ColorDetailDto> GetColorDetails()
+        {
+            return _colorDal.GetColorDetails();
         }
     }
 }
